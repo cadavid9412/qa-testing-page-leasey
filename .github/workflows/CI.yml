@@ -35,6 +35,7 @@ jobs:
 
       - name: Install Playwright dependencies
         run: |
+          cd tests
           npm install
           npx playwright install --with-deps
 
@@ -45,6 +46,7 @@ jobs:
 
       - name: Run Playwright tests
         run: |
+          cd tests
           npx playwright test
 
       - name: Upload Playwright Test Report
